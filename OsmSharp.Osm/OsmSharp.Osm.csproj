@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: \\Mac\Home\Documents\Visual Studio 2015\Projects\RSC-Tool-Native\packages\OsmSharp.Core.1.3.5\lib\net45\OsmSharp.Osm.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5D2DF32-A5F1-45E1-9640-2C7F4FB65ED6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>OsmSharp.Osm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <ApplicationVersion>1.3.5.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>OsmSharp.Osm</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>packages\protobuf-net.2.1.0\lib\net451\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="OsmSharp">
+      <HintPath>lib\OsmSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Change.cs" />
+    <Compile Include="ChangeSet.cs" />
+    <Compile Include="ChangeSetInfo.cs" />
+    <Compile Include="CompleteChange.cs" />
+    <Compile Include="ChangeType.cs" />
+    <Compile Include="CompleteChangeSet.cs" />
+    <Compile Include="CompleteOsmBase.cs" />
+    <Compile Include="CompleteOsmGeo.cs" />
+    <Compile Include="CompleteOsmType.cs" />
+    <Compile Include="CompleteRelation.cs" />
+    <Compile Include="CompleteRelationMember.cs" />
+    <Compile Include="CompleteUser.cs" />
+    <Compile Include="CompleteWay.cs" />
+    <Compile Include="ICompleteOsmGeo.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="OsmGeo.cs" />
+    <Compile Include="OsmGeoType.cs" />
+    <Compile Include="Relation.cs" />
+    <Compile Include="RelationMember.cs" />
+    <Compile Include="TagExtensions.cs" />
+    <Compile Include="Way.cs" />
+    <Compile Include="Xml\OsmDocument.cs" />
+    <Compile Include="Xml\OsmVersion.cs" />
+    <Compile Include="Xml\v0_6\Extensions.cs" />
+    <Compile Include="Xml\v0_6\api.cs" />
+    <Compile Include="Xml\v0_6\timeout.cs" />
+    <Compile Include="Xml\v0_6\changesets.cs" />
+    <Compile Include="Xml\v0_6\waynodes.cs" />
+    <Compile Include="Xml\v0_6\tracepoints.cs" />
+    <Compile Include="Xml\v0_6\area.cs" />
+    <Compile Include="Xml\v0_6\version.cs" />
+    <Compile Include="Xml\v0_6\osmChange.cs" />
+    <Compile Include="Xml\v0_6\create.cs" />
+    <Compile Include="Xml\v0_6\node.cs" />
+    <Compile Include="Xml\v0_6\tag.cs" />
+    <Compile Include="Xml\v0_6\way.cs" />
+    <Compile Include="Xml\v0_6\nd.cs" />
+    <Compile Include="Xml\v0_6\relation.cs" />
+    <Compile Include="Xml\v0_6\member.cs" />
+    <Compile Include="Xml\v0_6\memberType.cs" />
+    <Compile Include="Xml\v0_6\modify.cs" />
+    <Compile Include="Xml\v0_6\delete.cs" />
+    <Compile Include="Xml\v0_6\osm.cs" />
+    <Compile Include="Xml\v0_6\bounds.cs" />
+    <Compile Include="Xml\v0_6\bound.cs" />
+    <Compile Include="Xml\v0_6\changeset.cs" />
+    <Compile Include="Xml\v0_6\status.cs" />
+    <Compile Include="Xml\v0_6\user.cs" />
+    <Compile Include="Xml\v0_6\block.cs" />
+    <Compile Include="Xml\v0_6\role.cs" />
+    <Compile Include="Xml\v0_6\userchangeset.cs" />
+    <Compile Include="Xml\v0_6\traces.cs" />
+    <Compile Include="Xml\v0_6\contributorterms.cs" />
+    <Compile Include="Xml\v0_6\img.cs" />
+    <Compile Include="Xml\v0_6\diffResult.cs" />
+    <Compile Include="Xml\v0_6\osmresult.cs" />
+    <Compile Include="Xml\v0_6\noderesult.cs" />
+    <Compile Include="Xml\v0_6\wayresult.cs" />
+    <Compile Include="Xml\v0_6\relationresult.cs" />
+    <Compile Include="Xml\Streams\XmlOsmStreamSource.cs" />
+    <Compile Include="Xml\Streams\XmlOsmStreamTarget.cs" />
+    <Compile Include="Xml\Streams\XmlSimpleConverter.cs" />
+    <Compile Include="Xml\Streams\ChangeSets\XmlDataProcessorChangeSetSource.cs" />
+    <Compile Include="Tiles\Tile.cs" />
+    <Compile Include="Tiles\TileDefaultsForRouting.cs" />
+    <Compile Include="Tiles\TileRange.cs" />
+    <Compile Include="Tiles\TileRangeIndex.cs" />
+    <Compile Include="Streams\OsmStreamExtensions.cs" />
+    <Compile Include="Streams\OsmStreamFilter.cs" />
+    <Compile Include="Streams\OsmStreamNotSortedException.cs" />
+    <Compile Include="Streams\OsmStreamSource.cs" />
+    <Compile Include="Streams\OsmStreamSourceEmpty.cs" />
+    <Compile Include="Streams\OsmStreamTarget.cs" />
+    <Compile Include="Streams\OsmStreamTargetEmpty.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterBase.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterBoundingBox.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterExclude.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterMerge.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterPoly.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterProgress.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterSort.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterTags.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterTagsFilter.cs" />
+    <Compile Include="Streams\Filters\OsmStreamFilterWithEvents.cs" />
+    <Compile Include="Streams\Complete\OsmCompleteStreamSource.cs" />
+    <Compile Include="Streams\Complete\OsmCompleteStreamTarget.cs" />
+    <Compile Include="Streams\Complete\OsmSimpleCompleteStreamSource.cs" />
+    <Compile Include="Streams\Collections\OsmCollectionStreamWriter.cs" />
+    <Compile Include="Streams\Collections\OsmEnumerableStreamSource.cs" />
+    <Compile Include="Streams\ChangeSets\DataProcessorChangeSetFilter.cs" />
+    <Compile Include="Streams\ChangeSets\DataProcessorChangeSetSource.cs" />
+    <Compile Include="Streams\ChangeSets\DataProcessorChangeSetTarget.cs" />
+    <Compile Include="PBF\Encoder.cs" />
+    <Compile Include="PBF\Blob.cs" />
+    <Compile Include="PBF\BlobHeader.cs" />
+    <Compile Include="PBF\IPBFOsmPrimitiveConsumer.cs" />
+    <Compile Include="PBF\HeaderBlock.cs" />
+    <Compile Include="PBF\HeaderBBox.cs" />
+    <Compile Include="PBF\PrimitiveBlock.cs" />
+    <Compile Include="PBF\PrimitiveGroup.cs" />
+    <Compile Include="PBF\StringTable.cs" />
+    <Compile Include="PBF\Info.cs" />
+    <Compile Include="PBF\DenseInfo.cs" />
+    <Compile Include="PBF\ChangeSet.cs" />
+    <Compile Include="PBF\Node.cs" />
+    <Compile Include="PBF\DenseNodes.cs" />
+    <Compile Include="PBF\Way.cs" />
+    <Compile Include="PBF\Relation.cs" />
+    <Compile Include="PBF\PBFReader.cs" />
+    <Compile Include="PBF\InputStream.cs" />
+    <Compile Include="PBF\ZLibStreamWrapper.cs" />
+    <Compile Include="PBF\LimitedStream.cs" />
+    <Compile Include="PBF\PBFWriter.cs" />
+    <Compile Include="PBF\Streams\PBFOsmStreamSource.cs" />
+    <Compile Include="PBF\Streams\PBFOsmStreamTarget.cs" />
+    <Compile Include="PBF\Dense\Compressor.cs" />
+    <Compile Include="Geo\Streams\OsmFeatureStreamSource.cs" />
+    <Compile Include="Geo\Interpreter\FeatureInterpreter.cs" />
+    <Compile Include="Geo\Interpreter\SimpleFeatureInterpreter.cs" />
+    <Compile Include="Filters\Filter.cs" />
+    <Compile Include="Filters\FilterAny.cs" />
+    <Compile Include="Filters\FilterCombined.cs" />
+    <Compile Include="Filters\FilterCombineOperatorEnum.cs" />
+    <Compile Include="Filters\FilterTag.cs" />
+    <Compile Include="Filters\FilterType.cs" />
+    <Compile Include="Filters\Tags\FilterTagExists.cs" />
+    <Compile Include="Filters\Tags\FilterTagMatch.cs" />
+    <Compile Include="Cache\OsmDataCache.cs" />
+    <Compile Include="Cache\OsmDataCacheMemory.cs" />
+    <Compile Include="Data\DataSourceReadOnlyBase.cs" />
+    <Compile Include="Data\IDataSource.cs" />
+    <Compile Include="Data\IDataSourceReadOnly.cs" />
+    <Compile Include="Data\INodeSource.cs" />
+    <Compile Include="Data\IOsmGeoSource.cs" />
+    <Compile Include="Data\IRelationSource.cs" />
+    <Compile Include="Data\IWaySource.cs" />
+    <Compile Include="Data\KeyGenerator.cs" />
+    <Compile Include="Data\Memory\MemoryDataSource.cs" />
+    <Compile Include="Data\Cache\DataSourceCache.cs" />
+    <Compile Include="Data\Core\API\APIException.cs" />
+    <Compile Include="API\APICapabilities.cs" />
+    <Compile Include="API\APIConnection.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

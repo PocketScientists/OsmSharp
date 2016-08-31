@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: \\Mac\Home\Documents\Visual Studio 2015\Projects\RSC-Tool-Native\packages\OsmSharp.Core.1.3.5\lib\net45\OsmSharp.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62827FE5-45CC-4CAA-A4DD-66999215A6D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>OsmSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <ApplicationVersion>1.3.5.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>OsmSharp</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>packages\protobuf-net.2.1.0\lib\net451\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ITagsSource.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="ICloneable.cs" />
+    <Compile Include="PCLExtensions.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="DelegateEqualityComparer`1.cs" />
+    <Compile Include="Units\Unit.cs" />
+    <Compile Include="Units\Weight\Gram.cs" />
+    <Compile Include="Units\Weight\Kilogram.cs" />
+    <Compile Include="Units\Time\Hour.cs" />
+    <Compile Include="Units\Time\MilliSecond.cs" />
+    <Compile Include="Units\Time\Second.cs" />
+    <Compile Include="Units\Speed\KilometerPerHour.cs" />
+    <Compile Include="Units\Speed\Knots.cs" />
+    <Compile Include="Units\Speed\MeterPerSecond.cs" />
+    <Compile Include="Units\Speed\MilesPerHour.cs" />
+    <Compile Include="Units\Speed\Speed.cs" />
+    <Compile Include="Units\Distance\Kilometer.cs" />
+    <Compile Include="Units\Distance\Meter.cs" />
+    <Compile Include="Units\Angle\Degree.cs" />
+    <Compile Include="Units\Angle\Radian.cs" />
+    <Compile Include="Logging\Log.cs" />
+    <Compile Include="Logging\SourceLevels.cs" />
+    <Compile Include="Logging\TraceEventType.cs" />
+    <Compile Include="Logging\TraceListener.cs" />
+    <Compile Include="Logging\TraceSource.cs" />
+    <Compile Include="IO\CappedStream.cs" />
+    <Compile Include="IO\FastBitConverter.cs" />
+    <Compile Include="IO\LimitedStream.cs" />
+    <Compile Include="IO\Xml\IXmlSource.cs" />
+    <Compile Include="IO\Xml\Sources\XmlReaderSource.cs" />
+    <Compile Include="IO\Xml\Sources\XmlStreamSource.cs" />
+    <Compile Include="IO\Xml\Sources\XmlStringSource.cs" />
+    <Compile Include="IO\Xml\Nominatim\Search\SearchDocument.cs" />
+    <Compile Include="IO\Xml\Nominatim\Search\SearchVersion.cs" />
+    <Compile Include="IO\Xml\Nominatim\Search\v1\searchresults.cs" />
+    <Compile Include="IO\Xml\Nominatim\Search\v1\searchresultsPlace.cs" />
+    <Compile Include="IO\Xml\Nominatim\Search\v1\NewDataSet.cs" />
+    <Compile Include="IO\Xml\Nominatim\Reverse\v1\reversegeocode.cs" />
+    <Compile Include="IO\Xml\Nominatim\Reverse\v1\reversegeocodeResult.cs" />
+    <Compile Include="IO\Xml\Nominatim\Reverse\v1\reversegeocodeAddressparts.cs" />
+    <Compile Include="IO\Xml\Nominatim\Reverse\v1\NewDataSet.cs" />
+    <Compile Include="IO\Xml\Kml\KmlDocument.cs" />
+    <Compile Include="IO\Xml\Kml\KmlVersion.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LookAtType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\altitudeModeEnum.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ObjectType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ReplaceType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\DocumentType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\FolderType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\GroundOverlayType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LatLonBoxType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\OverlayType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LinkType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\refreshModeEnum.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\viewRefreshModeEnum.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\IconType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\FeatureType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\SnippetType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\TimeSpanType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\TimePrimitiveType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\TimeStampType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\StyleType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\IconStyleType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\IconStyleIconType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\vec2Type.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\unitsEnum.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ColorStyleType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\colorModeEnum.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LabelStyleType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LineStyleType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\PolyStyleType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\BalloonStyleType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ItemChoiceType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ListStyleType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\listItemTypeEnum.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ItemIconType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\StyleSelectorType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\StyleMapType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\StyleMapPairType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\styleStateEnum.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\RegionType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LatLonAltBoxType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LodType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ContainerType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\NetworkLinkType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\Item1ChoiceType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\PlacemarkType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LineStringType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\GeometryType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LinearRingType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ModelType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\LocationType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\OrientationType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ScaleType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\MultiGeometryType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\PointType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\PolygonType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\boundaryType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ScreenOverlayType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ChangeType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\ItemsChoiceType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\DeleteType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\CreateType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\UpdateType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\NetworkLinkControlType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_1\KmlType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\kml.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Document.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Folder.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\GroundOverlay.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Icon.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\refreshMode.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\viewRefreshMode.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\LatLonBox.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\LookAt.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\NetworkLink.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Url.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Placemark.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\LineString.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\altitudeMode.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\MultiGeometry.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\MultiLineString.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\MultiPoint.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Point.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\MultiPolygon.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Polygon.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\innerBoundaryIs.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\LinearRing.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\outerBoundaryIs.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\ItemsChoiceType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Snippet.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Style.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\IconStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\colorMode.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\LineStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\PolyStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\LabelStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\BalloonStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\TimePeriod.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\begin.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\TimeInstant.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\end.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\ItemsChoiceType1.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\ScreenOverlay.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\overlayXY.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\overlayXYXunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\overlayXYYunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\screenXY.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\screenXYXunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\screenXYYunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\size.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\sizeXunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\sizeYunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\ItemsChoiceType2.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Schema.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\ObjArrayField.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\ObjField.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\SimpleArrayField.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\SimpleField.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\StyleBlinker.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\State.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\key.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\StyleMap.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Pair.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\ItemsChoiceType3.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\NetworkLinkControl.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\Response.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0_response\ItemsChoiceType4.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\kml.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Document.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Folder.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\GroundOverlay.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Icon.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\refreshMode.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\viewRefreshMode.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\LatLonBox.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\LookAt.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\NetworkLink.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Url.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Placemark.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\LineString.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\altitudeMode.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\MultiGeometry.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\MultiLineString.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\MultiPoint.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Point.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\MultiPolygon.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Polygon.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\innerBoundaryIs.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\LinearRing.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\outerBoundaryIs.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\ItemsChoiceType.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Snippet.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Style.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\IconStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\colorMode.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\LineStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\PolyStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\LabelStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\BalloonStyle.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\TimePeriod.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\begin.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\TimeInstant.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\end.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\ItemsChoiceType1.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\ScreenOverlay.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\overlayXY.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\overlayXYXunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\overlayXYYunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\screenXY.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\screenXYXunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\screenXYYunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\size.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\sizeXunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\sizeYunits.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\ItemsChoiceType2.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Schema.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\ObjArrayField.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\ObjField.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\SimpleArrayField.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\SimpleField.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\StyleBlinker.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\State.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\key.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\StyleMap.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\Pair.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\ItemsChoiceType3.cs" />
+    <Compile Include="IO\Xml\Kml\v2_0\NetworkLinkControl.cs" />
+    <Compile Include="IO\Xml\Gpx\GpxDocument.cs" />
+    <Compile Include="IO\Xml\Gpx\GpxVersion.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\gpxType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\metadataType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\personType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\emailType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\trksegType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\wptType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\linkType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\fixType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\trkType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\rteType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\boundsType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_1\copyrightType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_0\gpx.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_0\boundsType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_0\gpxWpt.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_0\fixType.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_0\gpxRte.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_0\gpxRteRtept.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_0\gpxTrk.cs" />
+    <Compile Include="IO\Xml\Gpx\v1_0\gpxTrkTrksegTrkpt.cs" />
+    <Compile Include="IO\Web\HttpStatusCode.cs" />
+    <Compile Include="IO\Web\HttpWebRequest.cs" />
+    <Compile Include="IO\Web\HttpWebRequestDefault.cs" />
+    <Compile Include="IO\Web\HttpWebResponse.cs" />
+    <Compile Include="IO\Web\HttpWebResponseDefault.cs" />
+    <Compile Include="IO\Web\WebException.cs" />
+    <Compile Include="IO\StreamCache\IStreamCache.cs" />
+    <Compile Include="IO\StreamCache\MemoryCachedStream.cs" />
+    <Compile Include="Math\ILocationObject.cs" />
+    <Compile Include="Math\ITaggedObject.cs" />
+    <Compile Include="Math\VectorF2D.cs" />
+    <Compile Include="Math\Structures\ILocatedObjectIndex`2.cs" />
+    <Compile Include="Math\Structures\LocatedObjectIndexList`2.cs" />
+    <Compile Include="Math\Structures\StringTrees\StringTreeDictionary`1.cs" />
+    <Compile Include="Math\Structures\QTree\QuadTree`2.cs" />
+    <Compile Include="Math\Structures\KDTree\Tree2D`1.cs" />
+    <Compile Include="Math\Structures\KDTree\Tree2DNode`1.cs" />
+    <Compile Include="Math\StateMachines\FiniteStateMachineState`1.cs" />
+    <Compile Include="Math\StateMachines\FiniteStateMachineTransition`1.cs" />
+    <Compile Include="Math\StateMachines\FiniteStateMachineTransitionCondition`1.cs" />
+    <Compile Include="Math\Automata\FiniteStateMachine`1.cs" />
+    <Compile Include="Math\Random\IRandomGenerator.cs" />
+    <Compile Include="Math\Random\RandomGenerator.cs" />
+    <Compile Include="Math\Random\StaticRandomGenerator.cs" />
+    <Compile Include="Math\Primitives\PrimitiveF2D.cs" />
+    <Compile Include="Math\Primitives\BoxF2D.cs" />
+    <Compile Include="Math\Primitives\LineF2D.cs" />
+    <Compile Include="Math\Primitives\LinePointPosition.cs" />
+    <Compile Include="Math\Primitives\PointF2D.cs" />
+    <Compile Include="Math\Primitives\PolygonF2D.cs" />
+    <Compile Include="Math\Primitives\Polyline2D.cs" />
+    <Compile Include="Math\Primitives\RectangleF2D.cs" />
+    <Compile Include="Math\Primitives\Enumerators\Points\LineEnumerable.cs" />
+    <Compile Include="Math\Primitives\Enumerators\Points\IPointList.cs" />
+    <Compile Include="Math\Primitives\Enumerators\Points\PointEnumerable.cs" />
+    <Compile Include="Math\Primitives\Enumerators\Points\PointEnumerator.cs" />
+    <Compile Include="Math\Primitives\Enumerators\Lines\ILineList.cs" />
+    <Compile Include="Math\Primitives\Enumerators\Lines\LineEnumerator.cs" />
+    <Compile Include="Math\Algorithms\ConvexHull.cs" />
+    <Compile Include="Math\Algorithms\HilbertCurve.cs" />
+    <Compile Include="Math\Algorithms\Rotation.cs" />
+    <Compile Include="Math\Algorithms\SimplifyCurve.cs" />
+    <Compile Include="Math\Algorithms\Tessellation\LineairRingTessellator.cs" />
+    <Compile Include="Math\Geo\Extensions.cs" />
+    <Compile Include="Math\Geo\GeoCoordinate.cs" />
+    <Compile Include="Math\Geo\GeoCoordinateBox.cs" />
+    <Compile Include="Math\Geo\GeoCoordinateLine.cs" />
+    <Compile Include="Math\Geo\Simple\GeoCoordinateSimple.cs" />
+    <Compile Include="Math\Geo\Lambert\LambertEllipsoid.cs" />
+    <Compile Include="Math\Geo\Lambert\LambertProjectionBase.cs" />
+    <Compile Include="Math\Geo\Lambert\International\Belgium\Belgium1972LambertProjection.cs" />
+    <Compile Include="Math\Geo\Lambert\Ellipsoids\Hayford1924Ellipsoid.cs" />
+    <Compile Include="Math\Geo\Lambert\Ellipsoids\Wgs1984Ellipsoid.cs" />
+    <Compile Include="Math\Geo\Projections\IProjection.cs" />
+    <Compile Include="Math\Geo\Projections\WebMercator.cs" />
+    <Compile Include="Math\Geo\Meta\DirectionCalculator.cs" />
+    <Compile Include="Math\Geo\Meta\DirectionEnum.cs" />
+    <Compile Include="Math\Geo\Meta\RelativeDirection.cs" />
+    <Compile Include="Math\Geo\Meta\RelativeDirectionCalculator.cs" />
+    <Compile Include="Math\Geo\Meta\RelativeDirectionEnum.cs" />
+    <Compile Include="Geo\ICoordinate.cs" />
+    <Compile Include="Geo\Streams\FeatureCollectionStreamSource.cs" />
+    <Compile Include="Geo\Streams\Poly\PolyFileConverter.cs" />
+    <Compile Include="Geo\Streams\Kml\KmlFeatureStreamSource.cs" />
+    <Compile Include="Geo\Streams\Gpx\GpxFeatureStreamSource.cs" />
+    <Compile Include="Geo\Streams\GeoJson\GeoJsonConverter.cs" />
+    <Compile Include="Geo\Geometries\Geometry.cs" />
+    <Compile Include="Geo\Geometries\GeometryCollection.cs" />
+    <Compile Include="Geo\Geometries\GeometryCollectionBase`1.cs" />
+    <Compile Include="Geo\Geometries\LineairRing.cs" />
+    <Compile Include="Geo\Geometries\LineString.cs" />
+    <Compile Include="Geo\Geometries\MultiLineString.cs" />
+    <Compile Include="Geo\Geometries\MultiPoint.cs" />
+    <Compile Include="Geo\Geometries\MultiPolygon.cs" />
+    <Compile Include="Geo\Geometries\Point.cs" />
+    <Compile Include="Geo\Geometries\Polygon.cs" />
+    <Compile Include="Geo\Geometries\Streams\IFeatureStreamSource.cs" />
+    <Compile Include="Geo\Geometries\Streams\IFeatureStreamTarget.cs" />
+    <Compile Include="Geo\Features\Feature.cs" />
+    <Compile Include="Geo\Features\FeatureCollection.cs" />
+    <Compile Include="Geo\Attributes\GeometryAttribute.cs" />
+    <Compile Include="Geo\Attributes\GeometryAttributeCollection.cs" />
+    <Compile Include="Geo\Attributes\IGeometryAttributesIndex.cs" />
+    <Compile Include="Geo\Attributes\SimpleGeometryAttributeCollection.cs" />
+    <Compile Include="Collections\HugeDictionary`2.cs" />
+    <Compile Include="Collections\HugeHashSet`1.cs" />
+    <Compile Include="Collections\LargeBitArray32.cs" />
+    <Compile Include="Collections\LimitedStack`1.cs" />
+    <Compile Include="Collections\ObjectTable`1.cs" />
+    <Compile Include="Collections\StringTableDictionary`1.cs" />
+    <Compile Include="Collections\PermutationEnumerable`1.cs" />
+    <Compile Include="Collections\PermutationEnumerator`1.cs" />
+    <Compile Include="Collections\SortedDictionary`2.cs" />
+    <Compile Include="Collections\RBTree.cs" />
+    <Compile Include="Collections\SortedList`2.cs" />
+    <Compile Include="Collections\SortedSet`1.cs" />
+    <Compile Include="Collections\SparseArray`1.cs" />
+    <Compile Include="Collections\SparseLargeBitArray32.cs" />
+    <Compile Include="Collections\Tags\StringTableTagsCollection.cs" />
+    <Compile Include="Collections\Tags\Tag.cs" />
+    <Compile Include="Collections\Tags\TagsCollection.cs" />
+    <Compile Include="Collections\Tags\TagsCollectionBase.cs" />
+    <Compile Include="Collections\Tags\TagsTableCollection.cs" />
+    <Compile Include="Collections\Tags\Serializer\TagsCollectionSerializer.cs" />
+    <Compile Include="Collections\SpatialIndexes\ISpatialIndex`1.cs" />
+    <Compile Include="Collections\SpatialIndexes\ISpatialIndexReadonly`1.cs" />
+    <Compile Include="Collections\SpatialIndexes\RTreeMemoryIndex`1.cs" />
+    <Compile Include="Collections\SpatialIndexes\Serialization\SpatialIndexSerializer`1.cs" />
+    <Compile Include="Collections\SpatialIndexes\Serialization\SpatialIndexSerializerStream.cs" />
+    <Compile Include="Collections\SpatialIndexes\Serialization\v2\RTreeStreamIndex`1.cs" />
+    <Compile Include="Collections\SpatialIndexes\Serialization\v2\RTreeStreamSerializer`1.cs" />
+    <Compile Include="Collections\SpatialIndexes\Serialization\v2\ChildrenIndex.cs" />
+    <Compile Include="Collections\Sorting\QuickSort.cs" />
+    <Compile Include="Collections\PriorityQueues\BinaryHeap`1.cs" />
+    <Compile Include="Collections\PriorityQueues\BinaryHeapULong`1.cs" />
+    <Compile Include="Collections\PriorityQueues\IPriorityQueue`1.cs" />
+    <Compile Include="Collections\LongIndex\ILongIndex.cs" />
+    <Compile Include="Collections\LongIndex\LongIndex\LongIndex.cs" />
+    <Compile Include="Collections\Cache\LRUCache`2.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
